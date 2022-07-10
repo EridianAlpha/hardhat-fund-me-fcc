@@ -10,12 +10,12 @@ const networkConfig = {
 }
 
 const developmentChains = ["hardhat", "localhost"]
-const DECIMALS = 8
-const INITIAL_ASWER = 10000000000
+const DECIMALS = "8"
+const INITIAL_ANSWER = "200000000000" // $2000
 
 module.exports = {
     networkConfig,
     developmentChains,
     DECIMALS,
-    INITIAL_ASWER,
+    INITIAL_ANSWER,
 }

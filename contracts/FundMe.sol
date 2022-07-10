@@ -4,6 +4,7 @@ pragma solidity ^0.8.8;
 // Imports
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "./PriceConverter.sol";
+import "hardhat/console.sol";
 
 // Error Codes
 error FundMe__NotOwner();
@@ -69,6 +70,12 @@ contract FundMe {
      *  @dev This implements price feeds as our library
      */
     function fund() public payable {
+        console.log("msg.value", msg.value);
+        console.log(
+            "msg.value.getConversionRate(s_priceFeed)",
+            msg.value.getConversionRate(s_priceFeed)
+        );
+        console.log("MINIMUM_USD", MINIMUM_USD);
         require(
             msg.value.getConversionRate(s_priceFeed) >= MINIMUM_USD,
             "You need to spend more ETH!"

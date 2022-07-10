@@ -26,12 +26,13 @@ module.exports = {
     networks: {
         hardhat: {
             chainId: 31337,
-            // gasPrice: 130000000000,
+            gasPrice: 10000000000,
         },
         localhost: {
             url: "http://127.0.0.1:8545/",
             //accounts: Already defined by hardhat
             chainId: 31337,
+            gasPrice: 10000000000,
         },
         rinkeby: {
             url: RINKEBY_RPC_URL,
